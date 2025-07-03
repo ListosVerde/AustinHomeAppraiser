@@ -1,0 +1,31 @@
+# Robots.txt for Austin Home Appraiser
+# This file tells search engines how to crawl your site
+
+# Allow all search engines to crawl everything
+User-agent: *
+Allow: /
+
+# Block access to common system files (if they exist)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /package.json
+Disallow: /astro.config.mjs
+Disallow: /*.log
+
+# Allow crawling of CSS and JS files for better indexing
+Allow: /*.css
+Allow: /*.js
+
+# Sitemap location (update this when you add your custom domain)
+Sitemap: https://austinhomeappraiser.com/sitemap.xml
+
+# Crawl delay (optional - removes if causing issues)
+# Crawl-delay: 1
+
+# Additional notes:
+# - Update the sitemap URL when you connect your custom domain
+# - This file should be placed in the /public folder of your Astro project
+# - The file will be accessible at: https://austinhomeappraiser.com/robots.txt

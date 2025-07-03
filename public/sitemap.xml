@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Homepage - Main landing page -->
+  <url>
+    <loc>https://austinhomeappraiser.com/</loc>
+    <lastmod>2025-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Service Pages - If you add individual service pages later -->
+  
+  <!-- Market Value Appraisal -->
+  <url>
+    <loc>https://austinhomeappraiser.com/#market-value</loc>
+    <lastmod>2025-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Pre-Listing Appraisal -->
+  <url>
+    <loc>https://austinhomeappraiser.com/#pre-listing</loc>
+    <lastmod>2025-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Divorce Appraisal -->
+  <url>
+    <loc>https://austinhomeappraiser.com/#divorce</loc>
+    <lastmod>2025-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Estate Appraisal -->
+  <url>
+    <loc>https://austinhomeappraiser.com/#estate</loc>
+    <lastmod>2025-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Probate Appraisal -->
+  <url>
+    <loc>https://austinhomeappraiser.com/#probate</loc>
+    <lastmod>2025-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Floor Plan Services -->
+  <url>
+    <loc>https://austinhomeappraiser.com/#floor-plans</loc>
+    <lastmod>2025-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Service Areas -->
+  <url>
+    <loc>https://austinhomeappraiser.com/#service-areas</loc>
+    <lastmod>2025-07-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Contact/About Section -->
+  <url>
+    <loc>https://austinhomeappraiser.com/#contact</loc>
+    <lastmod>2025-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>
+
+<!-- 
+SITEMAP NOTES:
+- This sitemap includes your main page and key sections
+- Priority: 1.0 (highest) to 0.1 (lowest)
+- Change frequency tells Google how often content updates
+- Last modified date helps with indexing
+- Save this as 'sitemap.xml' in your /public folder
+- File will be accessible at: https://austinhomeappraiser.com/sitemap.xml
+- Submit to Google Search Console after deployment
+-->

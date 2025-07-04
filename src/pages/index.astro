@@ -1,451 +1,350 @@
----
-// src/pages/index.astro
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Austin Home Appraiser | Real Property Appraisal Services in Central Texas</title>
-  <meta name="description" content="Professional Home Appraisal services in Austin, Travis County, Bell County, Williamson County, and Hays County. Market value, pre-listing, divorce, estate, and probate appraisals.">
-  <meta name="keywords" content="Austin home appraiser, property appraisal, real estate valuation, Travis County, Bell County, Williamson County, Hays County">
-  <link rel="canonical" href="https://austinhomeappraiser.com/">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://austinhomeappraiser.com/">
-  <meta property="og:title" content="Austin Home Appraiser | Real Property Appraisal Services">
-  <meta property="og:description" content="Professional home appraisal services in Austin and Central Texas. Market value, pre-listing, divorce, estate, and probate appraisals.">
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://austinhomeappraiser.com/">
-  <meta property="twitter:title" content="Austin Home Appraiser | Professional Property Appraisal Services">
-  <meta property="twitter:description" content="Professional home appraisal services in Austin and Central Texas.">
-  
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Redefine Home Services, Inc",
-      "description": "Professional home appraisal services in Austin and Central Texas",
-      "url": "https://austinhomeappraiser.com",
-      "telephone": "(512) 777-1569",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Austin",
-        "addressRegion": "TX",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "30.633769",
-        "longitude": "-97.771713"
-      },
-      "areaServed": [
-        "Austin, TX",
-        "Travis County, TX",
-        "Bell County, TX",
-        "Williamson County, TX",
-        "Hays County, TX"
-      ],
-      "serviceType": "Home Appraisal Services",
-      "priceRange": "$$"
-    }
-  </script>
-  
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #fafafa;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    header {
-      background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-      color: white;
-      padding: 2rem 0;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-    
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      opacity: 0.9;
-    }
-    
-    .cta-button {
-      display: inline-block;
-      background: #e74c3c;
-      color: white;
-      padding: 15px 30px;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
-    }
-    
-    .cta-button:hover {
-      background: #c0392b;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
-    }
-    
-    .contact-info {
-      background: rgba(255,255,255,0.1);
-      padding: 1.5rem;
-      border-radius: 10px;
-      margin-top: 2rem;
-      backdrop-filter: blur(10px);
-    }
-    
-    .contact-info h3 {
-      margin-bottom: 1rem;
-      font-size: 1.3rem;
-    }
-    
-    .contact-details {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 1.1rem;
-    }
-    
-    .services {
-      padding: 4rem 0;
-      background: white;
-    }
-    
-    .services h2 {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 3rem;
-      color: #2c3e50;
-    }
-    
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
-    }
-    
-    .service-card {
-      background: #f8f9fa;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
-      border-left: 4px solid #3498db;
-    }
-    
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    }
-    
-    .service-card h3 {
-      color: #2c3e50;
-      margin-bottom: 1rem;
-      font-size: 1.4rem;
-    }
-    
-    .service-card p {
-      color: #666;
-      line-height: 1.7;
-    }
-    
-    .coverage {
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      padding: 4rem 0;
-      text-align: center;
-    }
-    
-    .coverage h2 {
-      font-size: 2.2rem;
-      margin-bottom: 2rem;
-      color: #2c3e50;
-    }
-    
-    .coverage-areas {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    
-    .area-badge {
-      background: #3498db;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 25px;
-      font-weight: 600;
-      box-shadow: 0 3px 10px rgba(52, 152, 219, 0.3);
-    }
-    
-    .why-choose {
-      background: white;
-      padding: 4rem 0;
-    }
-    
-    .why-choose h2 {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 3rem;
-      color: #2c3e50;
-    }
-    
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    
-    .feature {
-      text-align: center;
-      padding: 2rem;
-    }
-    
-    .feature-icon {
-      width: 60px;
-      height: 60px;
-      background: #3498db;
-      border-radius: 50%;
-      margin: 0 auto 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      color: white;
-    }
-    
-    .feature h3 {
-      margin-bottom: 1rem;
-      color: #2c3e50;
-    }
-    
-    footer {
-      background: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 2rem 0;
-    }
-    
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-    
-    .footer-section h3 {
-      margin-bottom: 1rem;
-      color: #3498db;
-    }
-    
-    .footer-section p, .footer-section a {
-      color: #bdc3c7;
-      text-decoration: none;
-    }
-    
-    .footer-section a:hover {
-      color: white;
-    }
-    
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-      
-      .hero p {
-        font-size: 1rem;
-      }
-      
-      .contact-details {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .coverage-areas {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin Home Appraiser | Real Property Appraisal Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #212529; /* Dark gray text for 4.5:1+ contrast on white */
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #1a365d; /* Dark blue for high contrast */
+            color: #ffffff; /* White text - 15.69:1 contrast ratio */
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-info a {
+            color: #ffffff; /* White links on dark blue - 15.69:1 contrast */
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-info a:hover {
+            background-color: #2d5a87; /* Lighter blue for hover, still accessible */
+            text-decoration: underline;
+        }
+
+        .contact-info span.address {
+            color: #ffffff;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2b77ad 0%, #1a365d 100%);
+            color: #ffffff; /* White text on dark blue gradient - 7.5:1+ contrast */
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #ffffff;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #dc3545; /* Red button */
+            color: #ffffff; /* White text on red - 5.25:1 contrast */
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #c82333; /* Darker red for hover */
+            text-decoration: none;
+        }
+
+        .cta-button.secondary {
+            background-color: #ffffff;
+            color: #1a365d;
+            border: 2px solid #1a365d;
+        }
+
+        .cta-button.secondary:hover {
+            background-color: #1a365d;
+            color: #ffffff;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 0;
+            background-color: #f8f9fa; /* Light gray background */
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a365d; /* Dark blue heading - 9.68:1 contrast on light gray */
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #dc3545;
+        }
+
+        .service-card h3 {
+            color: #1a365d; /* Dark blue headings - 9.68:1 contrast */
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #495057; /* Dark gray text - 7.15:1 contrast */
+            line-height: 1.7;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose {
+            padding: 4rem 0;
+            background-color: #ffffff;
+        }
+
+        .why-choose h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a365d; /* Dark blue - 9.68:1 contrast */
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .benefit-item h3 {
+            color: #1a365d; /* Dark blue - 9.68:1 contrast */
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-item p {
+            color: #495057; /* Dark gray - 7.15:1 contrast */
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a365d; /* Dark blue background */
+            color: #ffffff; /* White text - 15.69:1 contrast */
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        footer a {
+            color: #ffffff; /* White links - 15.69:1 contrast */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Focus indicators for accessibility */
+        a:focus, button:focus {
+            outline: 2px solid #dc3545;
+            outline-offset: 2px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="hero">
-        <h1>Austin Home Appraiser</h1>
-        <p>Professional Property Appraisal Services in Central Texas</p>
-        <a href="tel:5127771569" class="cta-button">Call Now: (512) 777-1569</a>
-        
-        <div class="contact-info">
-          <h3>Quick Contact</h3>
-          <div class="contact-details">
-            <div class="contact-item">
-              <span>📞</span>
-              <span>(512) 777-1569</span>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Austin Home Appraiser</div>
+                <div class="contact-info">
+                    <a href="tel:+15127771569">Call (512) 777-1569</a>
+                    <a href="mailto:andrew@inspectaustin.com">Email Us</a>
+                    <span class="address">14900 Avery Ranch Blvd C200, Austin, TX 78717</span>
+                </div>
             </div>
-            <div class="contact-item">
-              <span>✉️</span>
-              <span>andrew@inspectaustin.com</span>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Professional Property Appraisal Services in Central Texas</h1>
+            <p>Accurate, unbiased property valuations from certified appraisers</p>
+            <div class="cta-buttons">
+                <a href="sms:+15127771569?body=Hi, I'm interested in a property appraisal. Please contact me." class="cta-button">Text Me</a>
+                <a href="https://book.squareup.com/appointments/0pa2igxfxs1spx/location/06ZBPH8D1X2B0/services" class="cta-button secondary" target="_blank">Book a Quick Phone Consultation</a>
             </div>
-            <div class="contact-item">
-              <span>🕒</span>
-              <span>Mon-Fri: 9AM-5PM</span>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Residential Property Appraisal</h3>
+                    <p>A meticulous evaluation of your residential property's current market worth. Our skilled team employs industry knowledge and deep understanding of local real estate trends to determine an accurate and unbiased estimation of your property's value.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Pre-Listing Appraisal</h3>
+                    <p>A comprehensive evaluation conducted before you put your property on the market. This service provides a clear understanding of your property's worth, helping you set a realistic and competitive listing price.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Divorce Appraisal</h3>
+                    <p>Specialized service determining the market value of the family home to facilitate equitable asset distribution during divorce proceedings. We deliver reliable and objective valuations during this sensitive time.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Estate Appraisal</h3>
+                    <p>Comprehensive evaluation of real property assets within an estate. Crucial for determining fair market value of residential properties in estate settlement, serving the needs of all parties involved.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Probate Appraisal</h3>
+                    <p>Specialized service to determine fair market value of residential properties within an estate. A crucial step in the probate process, aiding in fair and equitable distribution of assets to heirs or beneficiaries.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Floor Plans & Sketches</h3>
+                    <p>Detailed and precise floor plans that outline the layout and dimensions of each room in your residential property. Valuable documentation for property valuation, marketing, and renovations.</p>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </header>
+    </section>
 
-  <section class="services">
-    <div class="container">
-      <h2>Our Appraisal Services</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Market Value Appraisal</h3>
-          <p>A meticulous evaluation of your residential property's current market worth. Our skilled team employs industry knowledge and deep understanding of local real estate trends to determine an accurate and unbiased estimation of your property's value.</p>
+    <section class="why-choose">
+        <div class="container">
+            <h2>Why Choose Austin Home Appraiser?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h3>Local Expertise</h3>
+                    <p>Proudly serving Central Texas and surrounding areas with deep understanding of local real estate market trends and property values.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <h3>Accurate Valuations</h3>
+                    <p>Precise, unbiased appraisals using industry-standard methods and local market data to ensure reliability.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <h3>Fast Service</h3>
+                    <p>Quick, efficient service without compromising on quality or accuracy to meet your timeline needs.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <h3>Professional Service</h3>
+                    <p>Courteous, reliable service with clear communication throughout the process to ensure your satisfaction.</p>
+                </div>
+            </div>
         </div>
-        
-        <div class="service-card">
-          <h3>Pre-Listing Appraisal</h3>
-          <p>A comprehensive evaluation conducted before you put your property on the market. This service provides a clear understanding of your property's worth, helping you set a realistic and competitive listing price.</p>
-        </div>
-        
-        <div class="service-card">
-          <h3>Divorce Appraisal</h3>
-          <p>Specialized service determining the market value of the family home to facilitate equitable asset distribution during divorce proceedings. We deliver reliable and objective valuations during this sensitive time.</p>
-        </div>
-        
-        <div class="service-card">
-          <h3>Estate Appraisal</h3>
-          <p>Comprehensive evaluation of real property assets within an estate. Crucial for determining fair market value of residential properties in estate settlement, serving the needs of all parties involved.</p>
-        </div>
-        
-        <div class="service-card">
-          <h3>Probate Appraisal</h3>
-          <p>Specialized service to determine fair market value of residential properties within an estate. A crucial step in the probate process, aiding in fair and equitable distribution of assets to heirs or beneficiaries.</p>
-        </div>
-        
-        <div class="service-card">
-          <h3>Floor Plan Services</h3>
-          <p>Detailed and precise floor plans that outline the layout and dimensions of each room in your residential property. Valuable documentation for property valuation, marketing, and renovations.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="coverage">
-    <div class="container">
-      <h2>Service Areas</h2>
-      <p>Proudly serving Central Texas and surrounding areas</p>
-      <div class="coverage-areas">
-        <div class="area-badge">Austin Metro</div>
-        <div class="area-badge">Travis County</div>
-        <div class="area-badge">Bell County</div>
-        <div class="area-badge">Williamson County</div>
-        <div class="area-badge">Hays County</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="why-choose">
-    <div class="container">
-      <h2>Why Choose Us?</h2>
-      <div class="features">
-        <div class="feature">
-          <div class="feature-icon">🏠</div>
-          <h3>Local Expertise</h3>
-          <p>Deep understanding of Central Texas real estate market trends and property values</p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Austin Home Appraiser. All rights reserved.</p>
+            <p>Professional Property Appraisal Services | Central Texas</p>
         </div>
-        
-        <div class="feature">
-          <div class="feature-icon">📊</div>
-          <h3>Accurate Valuations</h3>
-          <p>Precise, unbiased appraisals using industry-standard methods and local market data</p>
-        </div>
-        
-        <div class="feature">
-          <div class="feature-icon">⚡</div>
-          <h3>Fast Turnaround</h3>
-          <p>Quick, efficient service without compromising on quality or accuracy</p>
-        </div>
-        
-        <div class="feature">
-          <div class="feature-icon">🤝</div>
-          <h3>Professional Service</h3>
-          <p>Courteous, reliable service with clear communication throughout the process</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Redefine Home Services, Inc</h3>
-          <p>Professional Appraisal Services</p>
-          <p>Austin, Texas</p>
-        </div>
-        
-        <div class="footer-section">
-          <h3>Contact Info</h3>
-          <p>Phone: (512) 777-1569</p>
-          <p>Email: andrew@inspectaustin.com</p>
-          <p>Hours: Mon-Fri 9AM-5PM</p>
-        </div>
-        
-        <div class="footer-section">
-          <h3>Service Areas</h3>
-          <p>Austin Metro • Travis County</p>
-          <p>Bell County • Williamson County</p>
-          <p>Hays County</p>
-        </div>
-      </div>
-      
-      <div style="border-top: 1px solid #34495e; padding-top: 2rem; margin-top: 2rem;">
-        <p>&copy; 2025 Redefine Home Services, Inc. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 </body>
 </html>

@@ -8,6 +8,11 @@
     <meta name="author" content="Austin Home Appraiser">
     <meta name="robots" content="index, follow">
     
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://book.squareup.com" crossorigin>
+    <link rel="preconnect" href="https://www.google.com" crossorigin>
+    <link rel="dns-prefetch" href="https://maps.googleapis.com">
+    
     <!-- Open Graph meta tags for social sharing -->
     <meta property="og:title" content="Austin Home Appraiser | Professional Property Appraisal Services">
     <meta property="og:description" content="Accurate, unbiased residential property appraisals in Austin, TX and Central Texas. Specializing in divorce, estate, probate, and pre-listing valuations.">
@@ -36,7 +41,7 @@
             "addressCountry": "US"
         },
         "telephone": "+1-512-777-1569",
-        "email": "andrew@inspectaustin.com",
+        "email": "andrew&#64;inspectaustin.com",
         "url": "https://austinhomeappraiser.pages.dev/",
         "areaServed": {
             "@type": "GeoCircle",
@@ -60,11 +65,13 @@
             box-sizing: border-box;
         }
 
+        /* Optimize font loading */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: #212529; /* Dark gray text for 4.5:1+ contrast on white */
             background-color: #ffffff;
+            font-display: swap;
         }
 
         .container {
@@ -106,7 +113,6 @@
             text-decoration: none;
             padding: 0.5rem 1rem;
             border-radius: 4px;
-            transition: background-color 0.3s;
         }
 
         .contact-info a:hover {
@@ -157,12 +163,18 @@
             border-radius: 5px;
             font-size: 1.1rem;
             font-weight: bold;
-            transition: background-color 0.3s;
+        }
+
+        /* Optimize animations for performance */
+        .cta-button, .contact-info a {
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            will-change: background-color, transform;
         }
 
         .cta-button:hover {
             background-color: #c82333; /* Darker red for hover */
             text-decoration: none;
+            transform: translateY(-1px);
         }
 
         .cta-button.secondary {
@@ -327,7 +339,7 @@
                 <div class="logo">Austin Home Appraiser</div>
                 <div class="contact-info">
                     <a href="tel:+15127771569">Call (512) 777-1569</a>
-                    <a href="mailto:andrew@inspectaustin.com">Email Us</a>
+                    <a href="mailto:andrew&#64;inspectaustin.com">Email Us</a>
                     <span class="address">14900 Avery Ranch Blvd C200, Austin, TX 78717</span>
                 </div>
             </div>
@@ -339,9 +351,9 @@
             <h1>Professional Property Appraisal Services in Central Texas</h1>
             <p>Accurate, unbiased property valuations from certified appraisers</p>
             <div class="cta-buttons">
-                <a href="sms:+15127771569?body=Hi, I'm interested in a property appraisal. Please contact me." class="cta-button">Text Me</a>
-                <a href="https://book.squareup.com/appointments/0pa2igxfxs1spx/location/06ZBPH8D1X2B0/services" class="cta-button secondary" target="_blank">Book a Quick Phone Consultation</a>
-                <a href="https://www.google.com/maps/d/u/0/viewer?mid=1586SBzTli3CF_i4OD1JfVZvH6mHPSkc&ll=30.57236484507187%2C-97.64016915000002&z=8" class="cta-button tertiary" target="_blank">Service Map</a>
+                <a href="sms:+15127771569?body=Hi%2C%20I%27m%20interested%20in%20a%20property%20appraisal.%20Please%20contact%20me." class="cta-button">Text Me</a>
+                <a href="https://book.squareup.com/appointments/0pa2igxfxs1spx/location/06ZBPH8D1X2B0/services" class="cta-button secondary" target="_blank" rel="noopener noreferrer">Book a Quick Phone Consultation</a>
+                <a href="https://www.google.com/maps/d/u/0/viewer?mid=1586SBzTli3CF_i4OD1JfVZvH6mHPSkc&ll=30.57236484507187%2C-97.64016915000002&z=8" class="cta-button tertiary" target="_blank" rel="noopener noreferrer">Service Map</a>
             </div>
         </div>
     </section>
